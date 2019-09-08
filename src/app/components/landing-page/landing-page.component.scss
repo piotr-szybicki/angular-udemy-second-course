@@ -1,0 +1,110 @@
+@import '../colors';
+@import '../animations';
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light,0.8), 
+    rgba($color-primary-dark, 0.795)), 
+    url('https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  position: relative;
+  overflow: hidden;
+
+  &-logo {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+
+    img {
+      height: 10vh;
+    }
+  }
+
+  &-text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) /* intersting */;
+    text-align: center; 
+    /* text aling propert works only on display: inline or inline-block */
+  }
+}
+
+.heading-primary{
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+
+  &-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 3vw;
+    animation: moveInLeft 5s ease-in;
+  }
+
+  &-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2.5vw;
+    animation: moveInRight 5s ease-in;
+  }
+}
+
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block; 
+    border-radius: 100px;
+    /* inline block make link that have a default type of inlline to act in accordance with box model */
+    transition: all .2s;
+    position: relative;
+  }
+
+  &:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($color-black,0.2);
+  }
+
+  &:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color-black,0.2);
+  }
+
+  &-white{
+    background-color: $color-white;
+    color: $color-grey-dark;
+  }
+
+  ::active{
+    /* becouse we are using sudo element it bihaves as a child element thats why we can set the with 100% */
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+
+  &-white::after{
+    background-color: $color-white;
+  }
+
+  .btn:hover::after {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
