@@ -7,10 +7,11 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { FloatsLayoutComponent } from './components/floats-layout/floats-layout.component';
 import { AboutSectionComponent } from './components/about-section/about-section.component';
 import { ServicesComponent } from './components/services/services.component';
+import { DiscoverToursComponent } from './components/discover-tours/discover-tours.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, LandingPageComponent, FloatsLayoutComponent, AboutSectionComponent, ServicesComponent ],
+  declarations: [ AppComponent, LandingPageComponent, FloatsLayoutComponent, AboutSectionComponent, ServicesComponent, DiscoverToursComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
