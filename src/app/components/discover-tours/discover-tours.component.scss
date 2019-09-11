@@ -25,24 +25,13 @@
 .row{
   background-color: inherit;
   margin: 0 auto;
-
-  [class^="col-"] {
-    float: left;
-  }
+  text-align: center;
 
   .col-1-of-3 {
     width: calc((100% - 100px)/3);
+    display: inline-block;
+    text-align: center;
   }
-}
-
-.clearefix {
-  
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 
 .card {
@@ -61,20 +50,25 @@
     left: 0;
     width: 100%;
     backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
     &-front {
       background-color: $color-white;
     }
 
     &-back {
-      background-color: green;
       transform: rotateY(180deg);
+
+      &-1{
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark)
+      }
     }
 
   }
 
   &:hover &-side-front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 
   &:hover &-side-back {
