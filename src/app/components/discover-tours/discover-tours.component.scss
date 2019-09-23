@@ -58,6 +58,14 @@
       background-color: $color-white;
     }
 
+    &-heading {
+      color: black;
+    }
+
+    &-details {
+      color: black;
+    }
+
     &-back {
       transform: rotateY(180deg);
 
