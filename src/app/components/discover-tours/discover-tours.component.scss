@@ -41,6 +41,42 @@
   position: relative;
   height: 50rem;
 
+    &-picture {
+      height: 40%;
+      background-image: url('https://image.shutterstock.com/image-photo/spring-blossom-background-beautiful-nature-260nw-1033292395.jpg');
+      background-size: cover;
+    }
+
+    &-heading {
+      color: $color-white;
+      text-align: right;
+      position: absolute;
+      top: 12rem;
+      right: 2rem;
+      font-weight: 300;
+      font-size: 2.8rem;
+      width: 75%;
+      text-transform: uppercase;
+      
+      
+
+      &-span {
+        padding: 0 1rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+        &-1 {
+          background-image: linear-gradient(to right bottom , rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85))
+        }
+
+      }
+
+    }
+
+    &-details {
+      color: black;
+    }
+
   &-side {
     height: 50rem;
 
@@ -56,14 +92,6 @@
 
     &-front {
       background-color: $color-white;
-    }
-
-    &-heading {
-      color: black;
-    }
-
-    &-details {
-      color: black;
     }
 
     &-back {
